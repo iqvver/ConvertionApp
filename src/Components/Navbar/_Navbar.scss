@@ -1,0 +1,46 @@
+.navbar {
+    background-color: bisque;
+    padding: 20px 20px 20px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+
+    &__link {
+        color: black;
+    }
+
+    a {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+        color: black;
+        position: relative;
+
+        &:after {
+            display: block;
+            content: "";
+            height: 2px;
+            width: 0%;
+            left: 50%;
+            background-color: blue;
+            position: absolute;
+            -webkit-transition: width .3s ease-in-out;
+            -moz--transition: width .3s ease-in-out;
+            transition: width .3s ease-in-out;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+
+        &:hover:after,
+        &a:focus:after {
+            width: 100%;
+        }
+    }
+}
+
+.active-link {
+    border-bottom: 2px solid blue;
+}

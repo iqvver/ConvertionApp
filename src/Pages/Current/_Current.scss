@@ -1,0 +1,10 @@
+.current {
+
+    &__descr {
+        margin-top: 20px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}

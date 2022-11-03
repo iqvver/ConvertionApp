@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Components/Header/Header";
+import Navbar from "./Components/Navbar/Navbar";
+import ConvertionContainer from "./Pages/Conversion/ConvertionContainer";
+import CurrentContainer from "./Pages/Current/CorrentContainer";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="app__container">
+        <header>
+          <Header />
+        </header>
+        <nav>
+          <Navbar />
+        </nav>
+        <body>
+          <Routes>
+            <Route path="/*" element={<CurrentContainer />} />
+            <Route path="/" element={<Navigate replace to="/current" />} />
+            <Route path="/convertion" element={<ConvertionContainer />} />
+          </Routes>
+        </body>
+      </div>
     </div>
   );
 }
