@@ -14,13 +14,13 @@ function App() {
         <nav>
           <Navbar />
         </nav>
-        <body>
+        <main>
           <Routes>
             <Route path="/*" element={<CurrentContainer />} />
             <Route path="/" element={<Navigate replace to="/current" />} />
             <Route path="/convertion" element={<ConvertionContainer />} />
           </Routes>
-        </body>
+        </main>
       </div>
     </div>
   );

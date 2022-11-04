@@ -1,0 +1,36 @@
+.сonvertion {
+    &__descr {
+        margin-top: 20px;
+    }
+}
+
+.convertion-form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    margin-bottom: 20px;
+
+    &__input {
+        width: 100px;
+        border-radius: 5px;
+        border: none;
+        text-align: center;
+        outline:none;
+    }
+
+    &__button {
+        width: 50px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: green;
+            box-shadow: 1px 2px 15px rgb(0, 0, 0, .5);
+        }
+
+        &:active {
+            color: #fff;
+          }
+    }
+}
