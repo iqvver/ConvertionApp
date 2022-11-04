@@ -1,5 +1,6 @@
 import React from "react";
 
+// Header приложения
 const Header = () => {
   return (
     <div className="header">

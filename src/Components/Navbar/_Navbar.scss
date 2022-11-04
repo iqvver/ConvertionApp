@@ -8,6 +8,10 @@
     border-radius: 10px;
 
     &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 25px;
         color: black;
     }
 
@@ -18,29 +22,14 @@
         color: black;
         position: relative;
 
-        &:after {
-            display: block;
-            content: "";
-            height: 2px;
-            width: 0%;
-            left: 50%;
-            background-color: blue;
-            position: absolute;
-            -webkit-transition: width .3s ease-in-out;
-            -moz--transition: width .3s ease-in-out;
-            transition: width .3s ease-in-out;
-            -webkit-transform: translateX(-50%);
-            -moz-transform: translateX(-50%);
-            transform: translateX(-50%);
-        }
-
-        &:hover:after,
-        &a:focus:after {
-            width: 100%;
+        &:hover {
+            border-right: 2px solid blue;
+            border-radius: 100%;
         }
     }
 }
 
 .active-link {
-    border-bottom: 2px solid blue;
+    border-right: 2px solid blue;
+    border-radius: 100%;
 }

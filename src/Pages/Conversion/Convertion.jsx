@@ -1,6 +1,8 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 
+//компонента с текстовым полем (формой) для ввода запроса конвертации
+
 let ConvertionForm = ({ handleSubmit, count }) => {
   return (
     <form onSubmit={handleSubmit} className="convertion-form">
@@ -24,7 +26,7 @@ ConvertionForm = reduxForm({
   form: "Convertion",
 })(ConvertionForm);
 
-const Convertion = ({ currentList, count, newConvertion, total }) => {
+const Convertion = ({ currentList, count, yourCount, newConvertion, total }) => {
   return (
     <div className="сonvertion">
       <div className="сonvertion__title">Курс на: {currentList.Date}</div>
@@ -35,7 +37,7 @@ const Convertion = ({ currentList, count, newConvertion, total }) => {
         />
         {total ? (
           <div>
-            {count} = {total} RUB{" "}
+            {yourCount[0]} {yourCount[1].toUpperCase()} = {total} RUB
           </div>
         ) : null}
       </div>

@@ -5,6 +5,8 @@ import { getYourCount, getCurrent } from "../../redux/convertion-reduser";
 import { connect } from "react-redux";
 import { compose } from "redux";
 
+//контейнерная компонента (HOС) для конвертации валюты,
+
 const ConvertionContainer = (props) => {
   const [count, setCount] = useState(props.yourCount);
   let arrCount = "";
@@ -36,6 +38,7 @@ const ConvertionContainer = (props) => {
           arrCount={arrCount}
           total={props.total}
           newConvertion={newConvertion}
+          yourCount={props.yourCount}
         />
       )}
     </>
