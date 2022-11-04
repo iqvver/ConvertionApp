@@ -14,7 +14,9 @@ const ConvertionContainer = (props) => {
 
   let newConvertion = (value) => {
     setCount(value.convertionInput);
+    value.convertionInput = "";
   };
+
   useEffect(() => {
     props.getCurrent();
   }, []);
@@ -24,7 +26,7 @@ const ConvertionContainer = (props) => {
   }, [count]);
 
   return (
-    <div>
+    <>
       {!props.currentList ? (
         <Fetching />
       ) : (
@@ -36,13 +38,13 @@ const ConvertionContainer = (props) => {
           newConvertion={newConvertion}
         />
       )}
-    </div>
+    </>
   );
 };
 
 let mapStateToProps = (state) => {
   return {
-    //данные о пользователях
+    //данные из стейта
     currentList: state.convertionPage.currentList,
     yourCount: state.convertionPage.yourCount,
     total: state.convertionPage.total,

@@ -12,15 +12,18 @@ const CorrentContainer = (props) => {
 
   return (
     <>
-      {props.currentList.length === 0 ? <Fetching /> : 
-      <Current currentList={props.currentList} />}
+      {props.currentList.length === 0 ? (
+        <Fetching />
+      ) : (
+        <Current currentList={props.currentList} />
+      )}
     </>
   );
 };
 
 let mapStateToProps = (state) => {
   return {
-    //данные о пользователях
+    //данные из стейта
     currentList: state.convertionPage.currentList,
     isFetching: state.convertionPage.isFetching,
   };
