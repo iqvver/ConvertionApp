@@ -7,10 +7,10 @@ const IS_FETCHING = 'IS_FETCHING'; //загрузка
 // иноциализация переменных
 let initialState = {
     currentList: [], // массив валют
-    USD: 0,
-    EUR: 0,
-    yourCount: 1,
-    total: 1,
+    USD: "",
+    EUR: "",
+    yourCount: "",
+    total: "",
     isFetching: false, // загрузка
 };
 
@@ -19,17 +19,21 @@ const convertionReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_CURRENT: {
             // получение валют
-            return { ...state, currentList: action.currentList,
-            USD: action.currentList.Valute.USD.Value,
-            EUR: action.currentList.Valute.EUR.Value,
-        }
+            return {
+                ...state, currentList: action.currentList,
+                USD: action.currentList.Valute.USD.Value,
+                EUR: action.currentList.Valute.EUR.Value,
+            }
         }
 
         case SET_YOUR_COUNT: {
             // получение валют
-            return { ...state, yourCount: action.yourCount,
-                ...state, total: state.total = action.yourCount * state.USD
-             }
+            return {
+                ...state, yourCount: action.yourCount,
+                total: state.total = action.yourCount[1] === 'usd'
+                    ? state.total = action.yourCount[0] * state.USD
+                    : state.total = action.yourCount[0] * state.EUR
+            }
         }
 
         case IS_FETCHING: {

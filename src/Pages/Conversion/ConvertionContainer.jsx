@@ -7,6 +7,11 @@ import { compose } from "redux";
 
 const ConvertionContainer = (props) => {
   const [count, setCount] = useState(props.yourCount);
+  let arrCount = "";
+  {
+    count ? (arrCount = count.toString().split(" ")) : (arrCount = "");
+  }
+
   let newConvertion = (value) => {
     setCount(value.convertionInput);
   };
@@ -15,8 +20,9 @@ const ConvertionContainer = (props) => {
   }, []);
 
   useEffect(() => {
-    props.getYourCount(count);
+    props.getYourCount(arrCount);
   }, [count]);
+
   return (
     <div>
       {!props.currentList ? (
@@ -25,6 +31,7 @@ const ConvertionContainer = (props) => {
         <Convertion
           currentList={props.currentList}
           count={count}
+          arrCount={arrCount}
           total={props.total}
           newConvertion={newConvertion}
         />
