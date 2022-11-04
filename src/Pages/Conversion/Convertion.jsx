@@ -31,6 +31,9 @@ const Convertion = ({ currentList, count, yourCount, newConvertion, total }) => 
     <div className="сonvertion">
       <div className="сonvertion__title">Курс на: {currentList.Date}</div>
       <div className="сonvertion__descr">
+        Можно переводить: <br />
+        USD &#8594; RUB ,
+        EUR &#8594; RUB
         <ConvertionForm
           onSubmit={(value) => newConvertion(value)}
           count={count}

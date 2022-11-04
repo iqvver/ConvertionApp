@@ -1,0 +1,41 @@
+@media (max-width: 576px) {
+    .app {
+        &__container {
+            grid-template: 200px 70px 200px / auto;
+        }
+    }
+
+    header {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    nav {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+
+    main {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+
+    .navbar {
+        flex-direction: row;
+
+        a {
+            &:hover {
+                border-right: none;
+                border-bottom: 2px solid blue;
+                border-radius: 0%;
+            }
+        }
+    }
+
+    .active-link {
+        border-bottom: 2px solid blue;
+        border-radius: 0%;
+    }
+}
+
+@media (max-width: 320px) {}

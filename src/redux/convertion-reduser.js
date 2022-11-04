@@ -10,7 +10,7 @@ let initialState = {
     currentList: [], // массив валют
     USD: "", //доллар к рублю
     EUR: "", //евро к рублю
-    yourCount: "", //поле ввода для конвертации
+    yourCount: "15 usd in rub", //поле ввода для конвертации
     total: "", //результат конвертации
     defaultCurrency: 'RUB', //базовая валюта
     isFetching: false, // загрузка
