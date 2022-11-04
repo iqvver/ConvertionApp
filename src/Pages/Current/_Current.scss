@@ -1,5 +1,11 @@
 .current {
 
+    &__default {
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__descr {
         margin-top: 20px;
         height: 100px;
