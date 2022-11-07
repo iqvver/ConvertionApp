@@ -13,7 +13,7 @@ let ConvertionForm = ({ handleSubmit, count }) => {
         type={"text"}
         pattern="([0-9]+\s+usd+\s+in+\s+rub)|([0-9]+\s+eur+\s+in+\s+rub)"
         title="15 usd in rub или 15 eur in rub "
-        placeholder={count}
+        placeholder={'usd/eur in rub'}
       />
       {
         //<button className="convertion-form__button" type="submit">&#10004;</button>
@@ -40,7 +40,7 @@ const Convertion = ({ currentList, count, yourCount, newConvertion, total }) => 
         />
         {total ? (
           <div>
-            {yourCount[0]} {yourCount[1].toUpperCase()} = {total} RUB
+            {yourCount[0]} {yourCount[1]} = {total} {yourCount[3]}
           </div>
         ) : null}
       </div>

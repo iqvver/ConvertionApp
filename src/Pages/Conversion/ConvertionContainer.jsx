@@ -11,7 +11,7 @@ const ConvertionContainer = (props) => {
   const [count, setCount] = useState(props.yourCount);
   let arrCount = "";
   {
-    count ? (arrCount = count.toString().split(" ")) : (arrCount = "");
+    count ? (arrCount = count.toString().toUpperCase().split(" ")) : (arrCount = "");
   }
 
   let newConvertion = (value) => {

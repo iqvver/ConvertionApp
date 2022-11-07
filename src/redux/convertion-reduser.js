@@ -10,7 +10,7 @@ let initialState = {
     currentList: [], // массив валют
     USD: "", //доллар к рублю
     EUR: "", //евро к рублю
-    yourCount: "15 usd in rub", //поле ввода для конвертации
+    yourCount: "", //поле ввода для конвертации
     total: "", //результат конвертации
     defaultCurrency: 'RUB', //базовая валюта
     isFetching: false, // загрузка
@@ -33,7 +33,7 @@ const convertionReducer = (state = initialState, action) => {
             // вычисление результата конвертации
             return {
                 ...state, yourCount: action.yourCount,
-                total: state.total = action.yourCount[1] === 'usd'
+                total: state.total = action.yourCount[1] === 'USD'
                     ? state.total = action.yourCount[0] * state.USD
                     : state.total = action.yourCount[0] * state.EUR
             }
