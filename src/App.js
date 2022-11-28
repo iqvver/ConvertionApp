@@ -16,8 +16,8 @@ function App() {
         </nav>
         <main>
           <Routes>
-            <Route path="/*" element={<CurrentContainer />} />
-            <Route path="/" element={<Navigate replace to="/current" />} />
+            <Route path="/*" element={<Navigate replace to="/current" />} />
+            <Route path="/current" element={<CurrentContainer />} />
             <Route path="/convertion" element={<ConvertionContainer />} />
           </Routes>
         </main>
