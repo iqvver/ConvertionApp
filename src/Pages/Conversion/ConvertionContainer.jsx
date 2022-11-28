@@ -35,7 +35,6 @@ const ConvertionContainer = (props) => {
         <Convertion
           currentList={props.currentList}
           count={count}
-          arrCount={arrCount}
           total={props.total}
           newConvertion={newConvertion}
           yourCount={props.yourCount}
